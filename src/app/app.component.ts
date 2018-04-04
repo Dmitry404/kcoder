@@ -8,7 +8,7 @@ import 'codemirror/mode/javascript/javascript';
 })
 export class AppComponent {
   title = 'app';
-  config = {
+  options = {
     lineNumbers: true,
     tabSize: 2,
     mode: 'javascript',

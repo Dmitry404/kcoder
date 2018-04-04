@@ -24,10 +24,7 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/codemirror/lib/codemirror.css"
       ],
-      "scripts": [
-        "../node_modules/codemirror/lib/codemirror.js",
-        "../node_modules/codemirror/mode/javascript/javascript.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
