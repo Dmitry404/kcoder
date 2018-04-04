@@ -1,5 +1,8 @@
-<div class="pt-3 text-center">
-  <h1>{{ title }} is here for you</h1>
+<div class="pt-2">
+  <h1 class="text-center">{{ title }} is <i class="material-icons">visibility</i> you</h1>
   <hr>
-  <h1>{{ title }} is <i class="material-icons">visibility</i> you</h1>
+  <codemirror
+    [(ngModel)]="code"
+    [config]="config">
+  </codemirror>
 </div>
