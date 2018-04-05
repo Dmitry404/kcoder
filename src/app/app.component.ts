@@ -30,9 +30,9 @@ export class AppComponent implements OnInit {
     this.code = this.sourcesKbService.getSources(this.currentFile);
   }
 
-  onSolutionSelected(event) {
+  onSolutionSelected(solutionFile) {
     this.sourcesKbService.setSources(this.currentFile, this.code);
-    this.currentFile = event.target.text;
-    this.code = this.sourcesKbService.getSources(this.currentFile);
+    this.currentFile = solutionFile;
+    this.code = this.sourcesKbService.getSources(solutionFile);
   }
 }

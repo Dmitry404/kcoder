@@ -24,7 +24,7 @@
           <a
             class="nav-link file-ref-link"
             [class.active]="solutionFile === currentFile"
-            (click)="onSolutionSelected($event)"
+            (click)="onSolutionSelected(solutionFile)"
             href="#">{{ solutionFile }}</a>
         </li>
       </ul>
