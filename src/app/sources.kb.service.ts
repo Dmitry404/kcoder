@@ -1,3 +1,6 @@
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+
 export class SourcesKbService {
   private kb = {
     'solution01.js': `/*
@@ -16,16 +19,16 @@ sayHello(); // Hi there!`,
 `
   };
 
-  getSources(id: string): {id: string, source: string} {
-    return this.kb[id];
+  getSources(id: string): Observable<{id: string, source: string}> {
+    return of(this.kb[id]);
   }
 
   setSources(id: string, sources: string): void {
     this.kb[id] = sources;
   }
 
-  getAvailableIds(): string[] {
-    return Object.keys(this.kb);
+  getAvailableIds(): Observable<string[]> {
+    return of(Object.keys(this.kb));
   }
 }
 

@@ -25,14 +25,17 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.availableFiles = this.sourcesKbService.getAvailableIds();
-    this.currentFile = this.availableFiles[0];
-    this.code = this.sourcesKbService.getSources(this.currentFile);
+    this.sourcesKbService.getAvailableIds().subscribe(ids => {
+      this.availableFiles = ids;
+      this.currentFile = ids[0];
+
+      this.sourcesKbService.getSources(this.currentFile).subscribe(sources => this.code = sources);
+    });
   }
 
   onSolutionSelected(solutionFile) {
     this.sourcesKbService.setSources(this.currentFile, this.code);
     this.currentFile = solutionFile;
-    this.code = this.sourcesKbService.getSources(solutionFile);
+    this.sourcesKbService.getSources(solutionFile).subscribe(sources => this.code = sources);
   }
 }
