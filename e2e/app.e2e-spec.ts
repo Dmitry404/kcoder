@@ -9,6 +9,6 @@ describe('App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getWelcomeText()).toEqual('app is here for you');
+    expect(page.getWelcomeText()).toEqual('app is visibility you');
   });
 });
