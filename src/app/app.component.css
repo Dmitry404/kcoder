@@ -7,6 +7,6 @@
   font-size: 12px;
   color: #274658
 }
-.file-ref-link:hover {
+.file-ref-link:hover, .file-ref-link.active {
   color: #565f8b;
 }

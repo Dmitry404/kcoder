@@ -20,15 +20,12 @@
         <span>Working files</span>
       </h6>
       <ul class="nav flex-column">
-        <li class="nav-item pl-2">
-          <a class="nav-link file-ref-link" href="#">
-            solution.js
-          </a>
-        </li>
-        <li class="nav-item pl-2">
-          <a class="nav-link file-ref-link" href="#">
-            tests.js
-          </a>
+        <li class="nav-item pl-2" *ngFor="let solutionFile of availableFiles">
+          <a
+            class="nav-link file-ref-link"
+            [class.active]="solutionFile === currentFile"
+            (click)="onSolutionSelected($event)"
+            href="#">{{ solutionFile }}</a>
         </li>
       </ul>
     </nav>
