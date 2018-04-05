@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('app');
   }));
-  it('should render welcome message', async(() => {
+  it('should render codemirror editor', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app is visibility you');
+    expect(compiled.querySelector('ngx-codemirror')).toBeTruthy();
   }));
 });

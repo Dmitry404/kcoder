@@ -5,7 +5,7 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getWelcomeText() {
-    return element(by.css('app-root h1')).getText();
+  getNavbarBrandText() {
+    return element(by.css('app-root a.navbar-brand')).getText();
   }
 }

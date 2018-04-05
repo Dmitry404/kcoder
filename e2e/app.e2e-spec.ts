@@ -7,8 +7,8 @@ describe('App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should not be in fire (smoke test)', () => {
     page.navigateTo();
-    expect(page.getWelcomeText()).toEqual('app is visibility you');
+    expect(page.getNavbarBrandText()).toEqual('app is visibility you');
   });
 });
