@@ -2,9 +2,12 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { SourcesKbService } from './sources.kb.service';
 
 describe('AppComponent', () => {
+  let fixture;
+  let component;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
@@ -14,22 +17,27 @@ describe('AppComponent', () => {
         FormsModule,
         CodemirrorModule,
       ],
+      providers: [
+        SourcesKbService
+      ]
     }).compileComponents();
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
   }));
-  it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'app'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
-  }));
-  it('should render codemirror editor', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
+
+  it('should create the app component', () => {
+    expect(component).toBeDefined();
+  });
+
+  it(`should have as title 'app'`, () => {
+    expect(component.title).toEqual('app');
+  });
+
+  it('should render codemirror editor', () => {
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('ngx-codemirror')).toBeTruthy();
-  }));
+    const htmlElement: HTMLElement = fixture.nativeElement;
+    const editor = htmlElement.querySelector('ngx-codemirror');
+
+    expect(editor).toBeDefined();
+  });
 });
