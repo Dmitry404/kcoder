@@ -1,0 +1,12 @@
+.material-icons.md-12 { font-size: 12px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-inactive { color: rgba(0, 0, 0, 0.40); }
+
+.file-ref-link {
+  font-size: 12px;
+  color: #274658
+}
+.file-ref-link:hover {
+  color: #565f8b;
+}

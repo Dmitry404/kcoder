@@ -1,8 +1,49 @@
-<div class="pt-2">
-  <h1 class="text-center">{{ title }} is <i class="material-icons">visibility</i> you</h1>
-  <hr>
-  <ngx-codemirror
-    [(ngModel)]="code"
-    [options]="options">
-  </ngx-codemirror >
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    {{ title }} is <i class="material-icons md-12">visibility</i> you
+  </a>
+  <div class="navbar-nav">
+    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+    <a class="nav-item nav-link disabled" href="#">Disabled</a>
+  </div>
+  <div class="navbar-nav ml-auto">
+    <a class="nav-item nav-link disabled" href="#">Let me out</a>
+  </div>
+</nav>
+
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <nav class="col-2 p-0 m-0" style="background-color: rgb(223, 226, 226)">
+      <i class="material-icons md-inactive md-12 pl-2">settings</i>
+      <h6 class="sidebar-heading justify-content-between align-items-center px-3 mt-1 mb-1 text-muted font-weight-light">
+        <span>Working files</span>
+      </h6>
+      <ul class="nav flex-column">
+        <li class="nav-item pl-2">
+          <a class="nav-link file-ref-link" href="#">
+            solution.js
+          </a>
+        </li>
+        <li class="nav-item pl-2">
+          <a class="nav-link file-ref-link" href="#">
+            tests.js
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-10 p-0 m-0">
+      <div class="panel panel-default">
+        <div class="panel-heading text-right" style="background-color: rgb(223, 226, 226)">
+          <i class="material-icons md-12 pr-2">visibility</i>
+        </div>
+        <div class="panel-body">
+          <ngx-codemirror
+            [(ngModel)]="code"
+            [options]="options">
+          </ngx-codemirror >
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
