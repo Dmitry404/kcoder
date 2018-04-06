@@ -1,3 +1,5 @@
+declare var require: any;
+
 import { Component, OnInit } from '@angular/core';
 const md = require('markdown-it')();
 
