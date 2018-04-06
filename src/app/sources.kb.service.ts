@@ -19,7 +19,7 @@ sayHello(); // Hi there!`,
 `
   };
 
-  getSources(id: string): Observable<{id: string, source: string}> {
+  getSources(id: string): Observable<string> {
     return of(this.kb[id]);
   }
 

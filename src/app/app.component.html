@@ -12,35 +12,3 @@
   </div>
 </nav>
 
-<div class="container-fluid h-100">
-  <div class="row h-100">
-    <nav class="col-2 p-0 m-0 panel-background-color">
-      <i class="material-icons md-inactive md-12 pl-2">settings</i>
-      <h6 class="sidebar-heading justify-content-between align-items-center px-3 mt-1 mb-1 text-muted font-weight-light">
-        <span>Working files</span>
-      </h6>
-      <ul class="nav flex-column">
-        <li class="nav-item" *ngFor="let solutionFile of availableFiles">
-          <a
-            class="nav-link file-ref-link"
-            [class.active]="solutionFile === currentFile"
-            (click)="onExerciseSelected(solutionFile)"
-            href="#">{{ solutionFile }}</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="col-10 p-0 m-0">
-      <div class="panel panel-default">
-        <div class="panel-heading text-right panel-background-color">
-          <i class="material-icons md-12 pr-2">visibility</i>
-        </div>
-        <div class="panel-body">
-          <ngx-codemirror
-            [(ngModel)]="code"
-            [options]="options">
-          </ngx-codemirror >
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
