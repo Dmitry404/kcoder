@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  onSolutionSelected(solutionFile) {
+  onExerciseSelected(solutionFile) {
     this.sourcesKbService.setSources(this.currentFile, this.code);
     this.currentFile = solutionFile;
     this.sourcesKbService.getSources(solutionFile).subscribe(sources => this.code = sources);
