@@ -15,7 +15,7 @@ import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
     ExercisesListPageComponent
   ],
   imports: [
-    // AppRoutingModule,
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     CodemirrorModule,
