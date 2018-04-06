@@ -4,7 +4,7 @@ import { ExercisesListPageComponent } from './exercises-list-page/exercises-list
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/exercises', pathMatch: 'full' },
-  { path: '/exercises', component: ExercisesListPageComponent }
+  { path: 'exercises', component: ExercisesListPageComponent }
 ];
 
 @NgModule({
