@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-2 p-0 m-0 panel-background-color">
+      <i class="material-icons md-inactive md-12 pl-2">autorenew</i>
+      <h6 class="sidebar-heading justify-content-between align-items-center px-3 mt-1 mb-1 text-muted font-weight-light">
+        <span>Exercises</span>
+      </h6>
+      <ul class="nav flex-column">
+        <li class="nav-item" *ngFor="let exercise of exercises">
+          <a
+            class="nav-link exercise-item"
+            (click)="onExerciseSelected(exercise)"
+            href="#">{{ exercise }}</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-10 p-0 m-0">
+      <div class="panel panel-default">
+        <div class="panel-heading text-right panel-background-color">
+          <i class="material-icons md-12 pr-2">visibility</i>
+        </div>
+        <div class="panel-body">
+          <div class="px-3 py-3" style="background-color: white">
+            hello worm
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

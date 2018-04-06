@@ -5,11 +5,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
+import { ExercisesListPageComponent } from './exercises-list-page/exercises-list-page.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExercisesListPageComponent
   ],
   imports: [
     BrowserModule,
