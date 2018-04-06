@@ -6,11 +6,12 @@
         <span>Exercises</span>
       </h6>
       <ul class="nav flex-column">
-        <li class="nav-item" *ngFor="let exercise of exercises">
+        <li class="nav-item" *ngFor="let exercise of names">
           <a
             class="nav-link exercise-item"
+            [class.active]="exercise === selectedExercise"
             (click)="onExerciseSelected(exercise)"
-            href="#">{{ exercise }}</a>
+          >{{ exercise }}</a>
         </li>
       </ul>
     </nav>
@@ -20,9 +21,7 @@
           <i class="material-icons md-12 pr-2">visibility</i>
         </div>
         <div class="panel-body">
-          <div class="px-3 py-3" style="background-color: white">
-            hello worm
-          </div>
+          <div class="px-3 py-3" style="background-color: white" [innerHTML]="exerciseText"></div>
         </div>
       </div>
     </div>
