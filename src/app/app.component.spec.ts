@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -9,6 +10,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
+        HeaderNavbarComponent
       ]
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);
@@ -17,9 +19,5 @@ describe('AppComponent', () => {
 
   it('should create the app component', () => {
     expect(component).toBeTruthy();
-  });
-
-  it(`should have as title 'app'`, () => {
-    expect(component.title).toEqual('app');
   });
 });
