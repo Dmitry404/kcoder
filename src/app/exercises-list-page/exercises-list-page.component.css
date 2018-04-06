@@ -1,6 +1,7 @@
 .exercise-item {
   font-size: 12px;
-  color: #274658
+  color: #274658;
+  cursor: pointer;
 }
 .exercise-item:hover {
   color: #565f8b;
