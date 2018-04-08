@@ -7,6 +7,7 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { ExercisesListPageComponent } from './exercises-list-page/exercises-list-page.component';
 import { AppRoutingModule } from './app.routing.module';
 import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
     AppRoutingModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     CodemirrorModule,
   ],
   providers: [],

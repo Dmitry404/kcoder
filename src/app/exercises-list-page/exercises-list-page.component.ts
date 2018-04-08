@@ -1,3 +1,5 @@
+import { ExercisesService } from './exercises.service';
+
 declare var require: any;
 
 import { Component, OnInit } from '@angular/core';
@@ -6,29 +8,35 @@ const md = require('markdown-it')();
 @Component({
   selector: 'app-exercises-list-page',
   templateUrl: './exercises-list-page.component.html',
-  styleUrls: ['./exercises-list-page.component.css']
+  styleUrls: ['./exercises-list-page.component.css'],
+  providers: [ExercisesService]
 })
 export class ExercisesListPageComponent implements OnInit {
-  exercises = {
-    'ttt': '*asterisks* or _underscores_',
-    'fff': '**asterisks** or __underscores__',
-    'lll': '**asterisks and _underscores_**',
-    'nnn': '~~Scratch this~~'
-  };
-  names: string[];
-  selectedExercise = 'ttt';
+  exercises: {id: string, title: string, content: string}[];
+  selectedExerciseId: string;
   exerciseText: string;
 
-  constructor() {
+  constructor(private exercisesService: ExercisesService) {
   }
 
   ngOnInit() {
-    this.names = Object.keys(this.exercises);
+    this.exercisesService.fetchExercises()
+      .subscribe(exercises => {
+        const withTitle: {id: string, title: string, content: string}[] = [];
+        exercises.forEach((value) => {
+          withTitle.push({...value, title: this.getTitleFrom(value.content)});
+        });
+        this.exercises = withTitle;
+        this.onExerciseSelected(exercises[0]);
+    });
+  }
+
+  private getTitleFrom(content) {
+    return content.split('\n')[0].replace('###', '');
   }
 
   onExerciseSelected(exercise) {
-    this.selectedExercise = exercise;
-    this.exerciseText = md.render(this.exercises[exercise]);
+    this.selectedExerciseId = exercise.id;
+    this.exerciseText = md.render(exercise.content);
   }
-
 }
