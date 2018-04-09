@@ -8,12 +8,15 @@ import { ExercisesListPageComponent } from './exercises-list-page/exercises-list
 import { AppRoutingModule } from './app.routing.module';
 import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PageNotFoundComponent,
     HeaderNavbarComponent,
-    ExercisesListPageComponent
+    ExercisesListPageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,
