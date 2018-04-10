@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <nav class="col-2 p-0 m-0 panel-background-color">
-      <i class="material-icons md-inactive md-12 pl-2">autorenew</i>
+      <i class="material-icons md-inactive md-12 pl-2 icon-btn">autorenew</i>
       <h6 class="sidebar-heading justify-content-between align-items-center px-3 mt-1 mb-1 text-muted font-weight-light">
         <span>Exercises</span>
       </h6>
@@ -18,7 +18,7 @@
     <div class="col-10 p-0 m-0">
       <div class="panel panel-default">
         <div class="panel-heading text-right panel-background-color">
-          <i class="material-icons md-12 pr-2">visibility</i>
+          <span class="text-btn pr-2" (click)="onTrainKataClick()">train</span>
         </div>
         <div class="panel-body">
           <div class="px-3 py-3" style="background-color: white" [innerHTML]="exerciseText"></div>
