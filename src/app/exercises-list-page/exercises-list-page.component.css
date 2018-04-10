@@ -14,3 +14,7 @@
 .panel-background-color {
   background-color: rgb(222, 226, 226);
 }
+
+.minh-100 {
+  min-height: 100vh;
+}
