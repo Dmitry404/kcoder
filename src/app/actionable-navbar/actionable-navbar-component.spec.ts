@@ -22,4 +22,14 @@ describe('ActionableNavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // should contain:
+  // - header:
+  //   - text(can be empty) or icons bar(optional)
+  // - group:
+  //    - group header + action bar(optional)
+  //    - group items (either actionable or informational)
+  // - footer (optional)
+  //    - text or/and icons bar
+
 });
