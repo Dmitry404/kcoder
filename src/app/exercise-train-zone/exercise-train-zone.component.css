@@ -30,3 +30,22 @@
   font-size: 14px;
   color: #9a0027;
 }
+
+.badge-status {
+  width: 14px;
+  height: 7px;
+  display:inline-block;
+}
+.badge-status.green {
+  background-color: #28a745;
+}
+.badge-status.yellow {
+  background-color: #ffc107;
+}
+.badge-status.red {
+  background-color: #dc3545;
+}
+.badge-status.not-run {
+  background-color: #565f8b;
+  opacity: 0.4;
+}
