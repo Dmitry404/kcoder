@@ -29,7 +29,7 @@ export class ExerciseTrainZoneComponent implements OnInit {
   }
 
   getClassName(runStatus: RunStatus): string {
-    switch(runStatus) {
+    switch (runStatus) {
       case RunStatus.RED: return 'red';
       case RunStatus.YELLOW: return 'yellow';
       case RunStatus.GREEN: return 'green';
