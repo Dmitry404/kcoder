@@ -5,6 +5,7 @@ import { ExercisesService } from './exercises.service';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BsModalService } from 'ngx-bootstrap';
 
 describe('ExercisesListPageComponent', () => {
   let component: ExercisesListPageComponent;
@@ -15,6 +16,7 @@ describe('ExercisesListPageComponent', () => {
       // snapshot: { data: { ... } }
     } as ActivatedRoute;
     const fakeRouter = {} as Router;
+    const fakeModalService = {} as BsModalService;
 
     TestBed.configureTestingModule({
       declarations: [ExercisesListPageComponent],
@@ -24,6 +26,7 @@ describe('ExercisesListPageComponent', () => {
           { provide: ExercisesService, useClass: ExercisesServiceMock },
           { provide: ActivatedRoute, useValue: fakeActivatedRoute },
           { provide: Router, useValue: fakeRouter },
+          { provide: BsModalService, useValue: fakeModalService },
         ]
       }
     }).compileComponents();
