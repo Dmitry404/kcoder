@@ -10,7 +10,7 @@ import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train-zone.component';
-import { TrainExerciseGuard } from './exercise-train-zone/train.exercise.activate.guard';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,9 @@ import { TrainExerciseGuard } from './exercise-train-zone/train.exercise.activat
     FormsModule,
     HttpClientModule,
     CodemirrorModule,
+    ModalModule.forRoot(),
   ],
-  providers: [TrainExerciseGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

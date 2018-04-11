@@ -2,8 +2,9 @@ import { ExercisesService } from './exercises.service';
 
 declare var require: any;
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 const md = require('markdown-it')();
 
 @Component({
@@ -17,9 +18,13 @@ export class ExercisesListPageComponent implements OnInit {
   selectedExerciseId: string;
   exerciseText: string;
 
+  modalRef: BsModalRef;
+  @ViewChild('template') template;
+
   constructor(private exercisesService: ExercisesService,
               private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private modalService: BsModalService) {
   }
 
   ngOnInit() {
@@ -45,6 +50,19 @@ export class ExercisesListPageComponent implements OnInit {
 
   onTrainKataClick() {
     console.log(this.selectedExerciseId);
+    this.openModal(this.template);
+  }
+
+  private openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
+
+  confirm() {
+    this.modalRef.hide();
     this.router.navigate(['./', this.selectedExerciseId, 'train'], {relativeTo: this.route});
+  }
+
+  decline() {
+    this.modalRef.hide();
   }
 }
