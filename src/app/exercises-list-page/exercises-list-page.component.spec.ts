@@ -4,18 +4,26 @@ import { ExercisesListPageComponent } from './exercises-list-page.component';
 import { ExercisesService } from './exercises.service';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { ActivatedRoute, Router } from '@angular/router';
 
 describe('ExercisesListPageComponent', () => {
   let component: ExercisesListPageComponent;
   let fixture: ComponentFixture<ExercisesListPageComponent>;
 
   beforeEach(async(() => {
+    const fakeActivatedRoute = {
+      // snapshot: { data: { ... } }
+    } as ActivatedRoute;
+    const fakeRouter = {} as Router;
+
     TestBed.configureTestingModule({
       declarations: [ExercisesListPageComponent],
     }).overrideComponent(ExercisesListPageComponent, {
       set: {
         providers: [
           { provide: ExercisesService, useClass: ExercisesServiceMock },
+          { provide: ActivatedRoute, useValue: fakeActivatedRoute },
+          { provide: Router, useValue: fakeRouter },
         ]
       }
     }).compileComponents();

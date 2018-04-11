@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { ExercisesListPageComponent } from './exercises-list-page/exercises-list-page.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train-zone.component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -16,6 +17,7 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderNavbarComponent,
         ExercisesListPageComponent,
+        ExerciseTrainZoneComponent,
         PageNotFoundComponent
       ],
       imports: [AppRoutingModule],
