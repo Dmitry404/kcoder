@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train-zone.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ActionableNavbarComponent } from './actionable-navbar/actionable-navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     HeaderNavbarComponent,
     ExercisesListPageComponent,
     PageNotFoundComponent,
-    ExerciseTrainZoneComponent
+    ExerciseTrainZoneComponent,
+    ActionableNavbarComponent
   ],
   imports: [
     AppRoutingModule,

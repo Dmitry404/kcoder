@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ExercisesListPageComponent } from './exercises-list-page/exercises-list-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train-zone.component';
+import { ActionableNavbarComponent } from './actionable-navbar/actionable-navbar.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/exercises', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const appRoutes: Routes = [
       { path: ':id/train', component: ExerciseTrainZoneComponent },
     ]
   },
+  { path: 'actionable_navbar', component: ActionableNavbarComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
