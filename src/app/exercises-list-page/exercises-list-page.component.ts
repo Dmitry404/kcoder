@@ -3,6 +3,7 @@ import { ExercisesService } from './exercises.service';
 declare var require: any;
 
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 const md = require('markdown-it')();
 
 @Component({
@@ -16,7 +17,9 @@ export class ExercisesListPageComponent implements OnInit {
   selectedExerciseId: string;
   exerciseText: string;
 
-  constructor(private exercisesService: ExercisesService) {
+  constructor(private exercisesService: ExercisesService,
+              private route: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -38,5 +41,10 @@ export class ExercisesListPageComponent implements OnInit {
   onExerciseSelected(exercise) {
     this.selectedExerciseId = exercise.id;
     this.exerciseText = md.render(exercise.content);
+  }
+
+  onTrainKataClick() {
+    console.log(this.selectedExerciseId);
+    this.router.navigate(['./', this.selectedExerciseId, 'train'], {relativeTo: this.route});
   }
 }

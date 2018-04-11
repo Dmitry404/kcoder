@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train-zone.component';
+import { TrainExerciseGuard } from './exercise-train-zone/train.exercise.activate.guard';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PageNotFoundComponent,
     HeaderNavbarComponent,
     ExercisesListPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ExerciseTrainZoneComponent
   ],
   imports: [
     AppRoutingModule,
@@ -25,7 +28,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpClientModule,
     CodemirrorModule,
   ],
-  providers: [],
+  providers: [TrainExerciseGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
