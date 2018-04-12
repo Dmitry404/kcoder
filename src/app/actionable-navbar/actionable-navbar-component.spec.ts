@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActionableNavbarComponent } from './actionable-navbar.component';
+import { ActionableNavbarHeaderComponent } from './header/header-component';
 
 describe('ActionableNavbarComponent', () => {
   let component: ActionableNavbarComponent;
@@ -8,7 +9,10 @@ describe('ActionableNavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActionableNavbarComponent ]
+      declarations: [
+        ActionableNavbarComponent,
+        ActionableNavbarHeaderComponent
+      ],
     })
     .compileComponents();
   }));
@@ -24,12 +28,24 @@ describe('ActionableNavbarComponent', () => {
   });
 
   // should contain:
-  // - header:
-  //   - text(can be empty) or icons bar(optional)
+  // -
   // - group:
   //    - group header + action bar(optional)
   //    - group items (either actionable or informational)
   // - footer (optional)
   //    - text or/and icons bar
 
+  it('should contain header', () => {
+    const nativeElement: HTMLElement = fixture.debugElement.nativeElement;
+    const header: Element = nativeElement.querySelector('app-actionable-navbar-header');
+
+    expect(header).toBeTruthy();
+  });
+
+  it('should contain group of items', () => {
+    const nativeElement: HTMLElement = fixture.debugElement.nativeElement;
+    const groupOfElements = nativeElement.querySelector('app-actionable-navbar-elements');
+    // with at least one group
+    
+  });
 });

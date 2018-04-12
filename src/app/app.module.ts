@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train-zone.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ActionableNavbarComponent } from './actionable-navbar/actionable-navbar.component';
+import { ActionableNavbarHeaderComponent } from './actionable-navbar/header/header-component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ActionableNavbarComponent } from './actionable-navbar/actionable-navbar
     ExercisesListPageComponent,
     PageNotFoundComponent,
     ExerciseTrainZoneComponent,
-    ActionableNavbarComponent
+    ActionableNavbarComponent,
+    ActionableNavbarHeaderComponent,
   ],
   imports: [
     AppRoutingModule,

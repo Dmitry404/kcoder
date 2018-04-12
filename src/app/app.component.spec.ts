@@ -9,6 +9,7 @@ import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { FormsModule } from '@angular/forms';
 import { ActionableNavbarComponent } from './actionable-navbar/actionable-navbar.component';
+import { ActionableNavbarHeaderComponent } from './actionable-navbar/header/header-component';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -23,6 +24,7 @@ describe('AppComponent', () => {
         ExerciseTrainZoneComponent,
         PageNotFoundComponent,
         ActionableNavbarComponent,
+        ActionableNavbarHeaderComponent,
       ],
       imports: [AppRoutingModule, FormsModule, CodemirrorModule],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]
