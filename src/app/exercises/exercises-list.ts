@@ -9,8 +9,8 @@ const md = require('markdown-it')();
 
 @Component({
   selector: 'app-exercises-list-page',
-  templateUrl: './exercises-list-page.component.html',
-  styleUrls: ['./exercises-list-page.component.css'],
+  templateUrl: './exercises-list.html',
+  styleUrls: ['./exercises-list.css'],
   providers: [ExercisesService]
 })
 export class ExercisesListPageComponent implements OnInit {

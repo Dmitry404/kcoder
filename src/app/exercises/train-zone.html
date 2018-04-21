@@ -1,0 +1,28 @@
+<div class="container-fluid minh-100">
+  <div class="row minh-100">
+    <nav class="col-2 p-0 m-0 panel-background-color">
+      <source-files></source-files>
+      <hr>
+      <statistics></statistics>
+    </nav>
+    <div class="col-10 p-0 m-0">
+      <div class="panel panel-default">
+        <div class="panel-heading panel-background-color">
+          <div class="text-left float-left" *ngFor="let runStatus of runStatuses">
+            <div class="badge-status" [ngClass]="runStatus"></div>
+          </div>
+          <div class="text-right">
+            <span class="text-btn pr-2" (click)="onSubmitKataClick()">submit</span>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <ngx-codemirror
+            [(ngModel)]="code"
+            [options]="options">
+          </ngx-codemirror >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

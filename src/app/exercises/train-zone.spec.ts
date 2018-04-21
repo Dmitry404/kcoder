@@ -1,8 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExerciseTrainZoneComponent } from './exercise-train-zone.component';
+import { ExerciseTrainZoneComponent } from './train-zone';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { FormsModule } from '@angular/forms';
+import { SourceFilesComponent } from './source-files';
+import { StatisticsComponent } from './statistics';
+import { StatisticItemComponent } from './statistic-item';
 
 describe('ExerciseTrainZoneComponent', () => {
   let component: ExerciseTrainZoneComponent;
@@ -10,10 +13,9 @@ describe('ExerciseTrainZoneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExerciseTrainZoneComponent ],
+      declarations: [ExerciseTrainZoneComponent, SourceFilesComponent, StatisticsComponent, StatisticItemComponent],
       imports: [CodemirrorModule, FormsModule],
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
