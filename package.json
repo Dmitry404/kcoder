@@ -8,7 +8,8 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ci-tests": "karma start --browsers Firefox --single-run"
   },
   "private": true,
   "dependencies": {
