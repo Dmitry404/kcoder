@@ -1,8 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { ExercisesListPageComponent } from './exercises-list-page/exercises-list-page.component';
+import { ExercisesListPageComponent } from './exercises/exercises-list';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ExerciseTrainZoneComponent } from './exercise-train-zone/exercise-train-zone.component';
+import { ExerciseTrainZoneComponent } from './exercises/train-zone';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/exercises', pathMatch: 'full' },

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExercisesListPageComponent } from './exercises-list-page.component';
+import { ExercisesListPageComponent } from './exercises-list';
 import { ExercisesService } from './exercises.service';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
