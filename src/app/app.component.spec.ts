@@ -5,12 +5,9 @@ import { AppRoutingModule } from './app.routing.module';
 import { ExercisesListPageComponent } from './exercises/exercises-list';
 import { APP_BASE_HREF } from '@angular/common';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ExerciseTrainZoneComponent } from './exercises/train-zone';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { FormsModule } from '@angular/forms';
-import { SourceFilesComponent } from './exercises/source-files';
-import { StatisticsComponent } from './exercises/statistics';
-import { StatisticItemComponent } from './exercises/statistic-item';
+import { TrainingPageModule } from './training-page/training-page.module';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -22,13 +19,9 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderNavbarComponent,
         ExercisesListPageComponent,
-        ExerciseTrainZoneComponent,
-        SourceFilesComponent,
-        StatisticsComponent,
-        StatisticItemComponent,
         PageNotFoundComponent
       ],
-      imports: [AppRoutingModule, FormsModule, CodemirrorModule],
+      imports: [AppRoutingModule, FormsModule, CodemirrorModule, TrainingPageModule],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);

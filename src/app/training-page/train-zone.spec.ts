@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { SourceFilesComponent } from './source-files';
 import { StatisticsComponent } from './statistics';
 import { StatisticItemComponent } from './statistic-item';
+import { ProgressBarComponent } from './progress-bar';
+import { ProgressItemComponent } from './progress-item';
 
 describe('ExerciseTrainZoneComponent', () => {
   let component: ExerciseTrainZoneComponent;
@@ -13,7 +15,7 @@ describe('ExerciseTrainZoneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ExerciseTrainZoneComponent, SourceFilesComponent, StatisticsComponent, StatisticItemComponent],
+      declarations: [ExerciseTrainZoneComponent, SourceFilesComponent, StatisticsComponent, StatisticItemComponent, ProgressBarComponent, ProgressItemComponent],
       imports: [CodemirrorModule, FormsModule],
     }).compileComponents();
   }));
